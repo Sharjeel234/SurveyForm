@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <header class="header">
+    <h1 id="title" class="text-center">Developer Survey Form</h1>
+    <p id="description" class="description text-center">Thank you for taking the time to help us improve the platform</p>
+    </header>
+
+    <form id="survey-form">
+        
+        <div class="form-group">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter Your Name" required>
+        </div>
+
+        <div class="form-group">
+        <label for="email" id="email-label">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your Email" required>
+        </div>
+
+        <div class="form-group">
+        <label for="number" id="number-label">Age</label>
+        <input type="number" name="number" id="number" class="form-control" placeholder="Enter Your Age" min="1" max="99">
+        </div>
+
+        <div class="form-group">
+            <p>Which option best describes your current role?</p>
+        <select name="role" id="dropdown" class="form-control" required>
+            <option disabled selected value>Select Current Role</option>
+            <option value="frontend">Frontend Developer</option>
+            <option value="backend">Backend Developer</option>
+            <option value="fullstack">Full Stack Developer</option>
+            <option value="react">React Developer</option>
+            <option value="game">Game Developer</option>
+            <option value="android">Android Developer</option>
+        </select>
+        </div>
+
+        <div class="form-group">
+        <p>Which of the following tools used?</p>
+        <label>
+        <input type="radio" name="tool" value="vscode" class="input-radio">
+        Visual Studio Code</label>
+
+        <label>
+        <input type="radio" name="tool" value="vs" class="input-radio">
+        Visual Studio</label>
+
+        <label>
+        <input type="radio" name="tool" value="intellj" class="input-radio">
+        IntellJ</label>
+
+        <label>
+        <input type="radio" name="tool" value="notepadpp" class="input-radio">
+        Notepad++</label>
+
+        <label>
+        <input type="radio" name="tool" value="vim" class="input-radio">
+        Vim</label>
+
+        <label>
+        <input type="radio" name="tool" value="androidstu" class="input-radio">
+        Android Studio</label>
+
+        <label>
+        <input type="radio" name="tool" value="pycharm" class="input-radio">
+        PyCharm</label>
+
+        <label>
+        <input type="radio" name="tool" value="sublime" class="input-radio">
+        Sublime Text</label>
+        </div>
+
+        <div class="form-group">
+            <p>Which of the following languages used most?</p>
+        <label>
+            <input type="checkbox" name="lang" value="html/css" class="input-checkbox">
+        HTML/ CSS</label>
+        <label>
+            <input type="checkbox" name="lang" value="js" class="input-checkbox">
+        JavaScript</label>
+        <label>
+            <input type="checkbox" name="lang" value="java" class="input-checkbox">
+        Java</label>
+        <label>
+            <input type="checkbox" name="lang" value="cpp" class="input-checkbox">
+        C/ C++</label>
+        <label>
+            <input type="checkbox" name="lang" value="py" class="input-checkbox">
+        Python</label>
+        <label>
+            <input type="checkbox" name="lang" value="ts" class="input-checkbox">
+        TypeScript</label>
+        </div>
+
+        <div class="form-group">
+            <p>Which of the most used libraries, frameworks?</p>
+        <select name="role" id="dropdown" class="form-control" required>
+            <option disabled selected value>Select Current Framework</option>
+            <option value="angular">Angular</option>
+            <option value="react">React</option>
+            <option value="vue">VueJS</option>
+            <option value="backbone">Backbone JS</option>
+            <option value="meteor">Meteor</option>
+            <option value="ionic">Ionic</option>
+            <option value="react-native">React Native</option>
+            <option value="flutter">Flutter</option>
+        </select>
+        </div>
+
+        <div class="form-group">
+            <p>Any Comments</p>
+        <textarea class="input-textarea" class="form-control" placeholder="Enter Comment here"></textarea>
+        </div>
+
+        <div class="btn">
+        <button type="submit" id="submit">Submit</button>
+        </div>
+
+    </form>
+
+    </div>
+</body>
+</html>

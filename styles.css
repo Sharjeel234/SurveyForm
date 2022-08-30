@@ -1,0 +1,210 @@
+:root
+{
+    --color-white: #F8F9FA;
+    --color-background: #EFECE9;
+    --color-slate-blue: #5E60CE;
+    --color-slate-blue-alpha: rgba(94, 96, 206, 0.8);
+    --color-green: #80B918;
+    --color: #495057;
+    --border: 1px solid #CED4DA;
+    --border-color: #80BDFF;
+    --box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);    
+
+    --font-style: 'Poppins', sans-serif;
+    --bottom-mar: 0.5rem;
+    --container-mar: 3.125rem auto 0 auto;
+    --head-padding: 3rem 0.625rem 0.5rem;
+    --head-mar: 1.875rem;
+    --form-padding: 2.5rem 0.625rem;
+    --border-radius: 0.25rem;
+    --btn-border-radius: 0.125rem;
+    --formgrp-mar: 0 auto 1.25rem auto;
+    --formgrp-padding: 0.25rem; 
+    --formctrl-padding: 0.375rem 0.75rem;
+    --btn-padding: 0.75rem;
+    --transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    --text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+body
+{
+    font-family: var(--font-style);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+    color: var(--color-white);
+    background: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-slate-blue);
+    background-image: linear-gradient(
+        115deg,
+        rgba(58, 58, 158, 0.8),
+        rgba(136, 136, 206, 0.7)
+      ),
+      url(Pic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+.container
+{
+    width: 100%;
+    padding: var(--container-mar);
+}
+h1
+{
+    font-weight: 400;
+    line-height: 1.2;
+}
+p
+{
+    font-size: 1.125rem;
+}
+h1, p
+{
+    margin-top: 0;
+    margin-bottom: var(--bottom-mar);
+}
+.header
+{
+    
+    padding: var(--head-padding);
+    margin-bottom: var(--head-mar);
+}
+.description
+{
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: var(--text-shadow);
+}
+.text-center
+{
+    text-align: center;
+}
+
+/* Form */
+form
+{
+    background: var(--color-slate-blue-alpha);
+    padding: var(--form-padding);
+    border-radius: var(--border-radius);
+}
+label
+{
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: var(--bottom-mar);
+}
+input, select, button, textarea
+{
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button
+{
+    border: none;
+}
+.form-group
+{
+    margin: var(--formgrp-mar);
+    padding: var(--formgrp-padding);
+}
+.form-control
+{
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: var(--formctrl-padding);
+    color: var(--color);
+    background-color: var(--color-white);
+    background-clip: padding-box;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+.form-control:focus
+{
+    border-color: var(--border-color);
+    outline: 0;
+    box-shadow: var(--box-shadow);
+}
+.input-radio, .input-checkbox
+{
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+}
+.input-textarea
+{
+    min-height: 120px;
+    width: 100%;
+    padding: 0.625rem;
+    resize: vertical;
+    border: none;
+    border-radius: var(--border-radius);
+}
+.btn
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#submit
+{
+    display: block;
+    width: 100%;
+    padding: var(--btn-padding);
+    background: var(--color-green);
+    color: inherit;
+    border-radius: var(--btn-border-radius);
+    cursor: pointer;
+}
+/* Responsive Design */
+@media (min-width: 576px)
+{
+    .container
+    {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px)
+{
+    .container
+    {
+        max-width: 720px;
+    }
+    form{
+        margin: 2.5rem;
+    }
+}
+@media (min-width: 480px) 
+{
+    form
+    {
+        padding: 2.5rem;
+        margin: 1.5rem;
+    }
+}
